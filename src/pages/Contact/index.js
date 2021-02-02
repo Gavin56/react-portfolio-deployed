@@ -1,4 +1,3 @@
-import Header from "../../components/Header/index";
 import Footer from "../../components/Footer/index";
 import Grow from "@material-ui/core/Grow";
 import TextField from "@material-ui/core/TextField";
@@ -17,6 +16,7 @@ function Contact() {
     },
     h1: {
       marginTop: 20,
+      fontFamily: "Mukta",
     },
     paper: {
       marginTop: 30,
@@ -41,7 +41,6 @@ function Contact() {
 
   return (
     <div>
-      <Header value={2}></Header>
       <Grow
         in={checked}
         style={{ transformOrigin: "0 0 0" }}

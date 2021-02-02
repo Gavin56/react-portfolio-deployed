@@ -12,7 +12,7 @@ const projects = [
   {
     name: "Quokka Marketplace",
     description:
-      "Proof of concept ecommerce app that allows registered users to browse, .",
+      "Proof of concept ecommerce app that allows registered users to browse, buy and sell items from a database.",
     image:
       "https://github.com/Gavin56/images/blob/main/project2home.png?raw=true",
     links: {
