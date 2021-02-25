@@ -7,9 +7,7 @@ body {
   font-family: "Mukta";
 }
 
-#transparent-backdrop {
-  padding-bottom: 70px;
-}
+
 
 #welcome {
   font-family: "Spartan";
@@ -31,6 +29,10 @@ body {
     height: 100%;
     padding-top: 15px;
     background: rgba(0, 0, 0, 0.3);
+  }
+
+  #transparent-backdrop {
+    padding-bottom: 70px;
   }
 
   #contact-div {
@@ -72,6 +74,11 @@ body {
   #paper {
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
+  }
+
+  #transparent-backdrop {
+    padding-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   #image-div {

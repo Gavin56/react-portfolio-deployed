@@ -29,7 +29,7 @@ export default function AutoGrid({ projects }) {
               <Grow
               in={checked}
               style={{ transformOrigin: "0 0 0" }}
-              {...(checked ? { timeout: (500 * index) } : {})}
+              {...(checked ? { timeout: (300 * (index + 1)) } : {})}
               >
             <Grid item xs>
               <Project project={project}></Project>
