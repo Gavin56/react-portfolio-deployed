@@ -30,11 +30,11 @@ export default function SimpleGrow({project}) {
   const [checked, setChecked] = React.useState(true);
 
   return (
-    <Grow
-    in={checked}
-    style={{ transformOrigin: "0 0 0" }}
-    {...(checked ? { timeout: 1000 } : {})}
-    >
+    // <Grow
+    // in={checked}
+    // style={{ transformOrigin: "0 0 0" }}
+    // {...(checked ? { timeout: 1000 } : {})}
+    // >
     <Card elevation={4} className={classes.card}>
       <CardActionArea>
         <CardMedia
@@ -64,6 +64,6 @@ export default function SimpleGrow({project}) {
         <Button project={project}></Button>
       </CardActions>
     </Card>
-    </Grow>
+    // </Grow>
   );
 }
