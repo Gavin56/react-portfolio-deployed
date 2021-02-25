@@ -3,7 +3,11 @@ import Grow from "@material-ui/core/Grow";
 import Container from "../../components/Container/index";
 import Paper from "@material-ui/core/Paper";
 import IconButton from "@material-ui/core/IconButton";
-import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import Button from "@material-ui/core/Button";
+// import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
+import "./style.css";
 
 function About() {
   const useStyles = makeStyles((theme) => ({
@@ -16,74 +20,40 @@ function About() {
         paddingBottom: 50,
       },
     },
-    h1: {
-      marginLeft: 50,
-      marginTop: 50,
-      color: "white",
-      fontFamily: "Mukta",
-    },
-    image: {
-      height: 450,
-      borderRadius: 50,
-      float: "left",
-      marginRight: 50,
-      marginLeft: 50,
-      marginTop: 50,
-    },
-    about: {
-      marginTop: 100,
-      color: "white",
-      fontSize: 20,
-      fontFamily: "Mukta",
-    },
-    contactInfo: {
-      color: "white",
-      marginTop: 40,
-      marginRight: 100,
-      float: "left",
-      fontFamily: "Mukta",
-    },
     fontFamily: "Chivo",
-    paper: {
-      height: 670,
-      paddingTop: 15,
-      background: "rgba(0,0,0,.3)",
-    },
   }));
 
   const classes = useStyles();
   const checked = true;
 
   return (
-    <div>
+    <div style={{overflow: "hidden"}}>
       <Grow
         in={checked}
         style={{ transformOrigin: "0 0 0" }}
         {...(checked ? { timeout: 1000 } : {})}
       >
-        <Paper className={classes.paper}>
+        <Paper id="paper">
           <div>
-            <h1 className={classes.h1}>
-              Welcome. Thank you for checking out my work.
-            </h1>
+            <h1 id="welcome">Welcome. Thank you for checking out my work.</h1>
 
-            <img
-              className={classes.image}
-              src="https://lh3.googleusercontent.com/pw/ACtC-3f8UlBk_doTYMrS7x07jLtCn6D2e2I7LVeKy0j1a8px4Y_iYm8163EZsBE1sqZu8R_8v1SD0rFZv1Zn6nCa0jEbAEcwu6JOExetuQX5390qPvDC1EEE_ojFmTHia-zlyw4ipcDcm-OmCSG46-M8u0L_=w675-h899-no?authuser=0"
-              alt="Me, sitting"
-            ></img>
+            <div id="image-div">
+              <img
+                id="my-photo"
+                src="https://github.com/Gavin56/images/blob/main/portfolio-placeholder-photo-square.jpg?raw=true"
+                alt="Me, sitting"
+              ></img>
+            </div>
 
             <Container>
-              <div>
-                <p className={classes.about}>
+              <div id="transparent-backdrop">
+                <p id="about">
                   My name is Gavin O'Brien. I was born and raised in New Jersey.
                   I currently have an Associate's Degree from Bergen Community
                   college and will be attending the New Jersey Institute of
                   Technology in the Fall. I am an aspiring web developer with
                   great interest in developing apps that are equally aesthetic
                   as they are functional.
-                  <br />
-                  <br /> <br />
                   {/* Check out some of my applications over here:
                 <IconButton>
                   <DoubleArrowIcon
@@ -94,15 +64,49 @@ function About() {
                 </IconButton> */}
                 </p>
 
-                <p className={classes.contactInfo}>
-                  <strong style={{ fontStyle: "italic", fontSize: 20 }}>
-                    Contact me:
-                  </strong>
-                  <br />
-                  GavinOBrien56@gmail.com
-                  <br />
-                  (201) 414-6122
-                </p>
+                <div id="contact-div">
+                  <div id="contact-info">
+                    <strong style={{ fontStyle: "italic", fontSize: 20 }}>
+                      Contact me:
+                    </strong>
+                    <br />
+                    GavinOBrien56@gmail.com
+                    <br />
+                    (201) 414-6122
+                  </div>
+                  <div id="contact-buttons">
+                    <IconButton
+                      aria-label="github"
+                      href="https://github.com/Gavin56"
+                      color="primary"
+                    >
+                      <GitHubIcon></GitHubIcon>
+                    </IconButton>
+
+                    <IconButton
+                      aria-label="linkedin"
+                      color="primary"
+                      href="https://www.linkedin.com/in/gavin-o-brien-6829a61b4/"
+                    >
+                      <LinkedInIcon></LinkedInIcon>
+                    </IconButton>
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      size="small"
+                      style={{ marginLeft: 10 }}
+                    >
+                      <a
+                        style={{
+                          textDecoration: "none",
+                        }}
+                        href="https://drive.google.com/file/d/16iPBQwg1EaKFSzm4a0Q-4eB7Q0s6cKND/view?usp=sharing"
+                      >
+                        Resume
+                      </a>
+                    </Button>
+                  </div>
+                </div>
               </div>
             </Container>
           </div>

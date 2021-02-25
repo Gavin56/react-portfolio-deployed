@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
@@ -10,10 +11,9 @@ import Box from "@material-ui/core/Box";
 import Home from "../../pages/Home/index";
 import Portfolio from "../../pages/Portfolio/index";
 import Contact from "../../pages/Contact/index";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import IconButton from "@material-ui/core/IconButton";
-import GitHubIcon from "@material-ui/icons/GitHub";
+import Grid from "@material-ui/core/Grid";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./style.css"
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -55,12 +55,9 @@ const useStyles = makeStyles((theme) => ({
   tab: {
     color: "white",
   },
-  nav: {
-    marginLeft: "30%",
-    marginTop: 10,
-    color: "white",
-    fontFamily: "Montserrat Alternates",
-  },
+  tabs: {
+    textColor: "teal"
+  }
 }));
 
 export default function FullWidthTabs() {
@@ -76,6 +73,8 @@ export default function FullWidthTabs() {
     setValue(index);
   };
 
+  const mobileStyles = useMediaQuery("(max-width:960px)");
+
   return (
     <div>
       <AppBar
@@ -84,38 +83,33 @@ export default function FullWidthTabs() {
         position="static"
         color="default"
       >
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-        >
-          <Tab className={classes.tab} label="Home" {...a11yProps(0)} />
-          <Tab className={classes.tab} label="Portfolio" {...a11yProps(1)} />
-          <Tab className={classes.tab} label="Contact" {...a11yProps(2)} />
-
-          <div className={classes.nav}>
-            <h1 style={{float:"left"}}>Gavin O'Brien</h1>
-
-            <div style={{float:"left", marginLeft:50}}>
-              <IconButton
-                aria-label="github"
-                href="https://github.com/Gavin56"
-                color="primary"
-              >
-                <GitHubIcon></GitHubIcon>
-              </IconButton>
-
-              <IconButton
-                aria-label="linkedin"
-                color="primary"
-                href="https://www.linkedin.com/in/gavin-o-brien-6829a61b4/"
-              >
-                <LinkedInIcon></LinkedInIcon>
-              </IconButton>
-            </div>
-          </div>
-        </Tabs>
+        <Grid container>
+          <Grid item xs={12} md={6}>
+            <Tabs
+              xs={12}
+              md={6}
+              value={value}
+              onChange={handleChange}
+              className={classes.tabs}
+              indicatorColor="primary"
+              textColor="primary"
+              variant={mobileStyles && "fullWidth"}
+            >
+              <Tab className={classes.tab} label="Home" {...a11yProps(0)} />
+              <Tab
+                className={classes.tab}
+                label="Portfolio"
+                {...a11yProps(1)}
+              />
+              <Tab className={classes.tab} label="Contact" {...a11yProps(2)} />
+            </Tabs>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <h1 id="my-name" style={{ textAlign: "center",  }}>
+              Gavin O'Brien
+            </h1>
+          </Grid>
+        </Grid>
       </AppBar>
       <SwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}

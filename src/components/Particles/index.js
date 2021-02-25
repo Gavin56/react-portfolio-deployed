@@ -1,4 +1,5 @@
 import Particles from "react-tsparticles";
+import "./style.css"
 
 export default function Particle() {
   return (
