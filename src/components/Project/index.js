@@ -60,7 +60,7 @@ export default function SimpleGrow({project}) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions style={{justifyContent: "center"}}>
         <Button project={project}></Button>
       </CardActions>
     </Card>

@@ -79,6 +79,8 @@ function About() {
                       aria-label="github"
                       href="https://github.com/Gavin56"
                       color="primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <GitHubIcon></GitHubIcon>
                     </IconButton>
@@ -87,6 +89,8 @@ function About() {
                       aria-label="linkedin"
                       color="primary"
                       href="https://www.linkedin.com/in/gavin-o-brien-6829a61b4/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <LinkedInIcon></LinkedInIcon>
                     </IconButton>
@@ -101,6 +105,8 @@ function About() {
                           textDecoration: "none",
                         }}
                         href="https://drive.google.com/file/d/16iPBQwg1EaKFSzm4a0Q-4eB7Q0s6cKND/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Resume
                       </a>
