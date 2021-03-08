@@ -32,7 +32,7 @@ const projects = [
     },
   },
   {
-    name: "Google Boohub.ks Search",
+    name: "Google Books Search",
     description: "Search for books using Google's API and save them to the database.",
     image:
       "https://github.com/Gavin56/images/blob/main/google-books-searched.png?raw=true",

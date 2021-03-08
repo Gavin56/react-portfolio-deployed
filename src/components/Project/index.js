@@ -21,11 +21,11 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: "center",
     backgroundColor: "rgb(70, 70, 70)",
-    color: "white"
+    color: "white",
   },
 }));
 
-export default function SimpleGrow({project}) {
+export default function SimpleGrow({ project }) {
   const classes = useStyles();
   const [checked, setChecked] = React.useState(true);
 
@@ -36,7 +36,11 @@ export default function SimpleGrow({project}) {
     // {...(checked ? { timeout: 1000 } : {})}
     // >
     <Card elevation={4} className={classes.card}>
-      <CardActionArea>
+      <CardActionArea
+        target="blank"
+        href={project.links.appLink}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
         <CardMedia
           component="img"
           height="170"
@@ -48,19 +52,16 @@ export default function SimpleGrow({project}) {
             gutterBottom
             variant="h5"
             component="h2"
-            style={{fontFamily:"Spartan"}}
+            style={{ fontFamily: "Spartan" }}
           >
             {project.name}
           </Typography>
-          <Typography
-            variant="body2"
-            component="p"
-          >
+          <Typography variant="body2" component="p">
             {project.description}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions style={{justifyContent: "center"}}>
+      <CardActions style={{ justifyContent: "center" }}>
         <Button project={project}></Button>
       </CardActions>
     </Card>
