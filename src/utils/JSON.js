@@ -23,7 +23,7 @@ const projects = [
   {
     name: "Going Platinum",
     description:
-      "A MERN app that uses the Spotfy API to pair customizable playlists with user-created tasks.",
+      "A MERN app that uses the Spotify API to pair customizable playlists with user-created tasks.",
     image:
       "https://raw.githubusercontent.com/Gavin56/images/main/going-platinum-profile.png",
     links: {
