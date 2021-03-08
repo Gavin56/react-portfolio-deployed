@@ -24,8 +24,8 @@ const MyButton = styled(({ color, ...other }) => <Button {...other} />)({
 export default function AdaptingStyledComponents({project}) {
   return (
     <React.Fragment>
-      <MyButton size="small" href={project.links.appLink} color="green">Deployed Application</MyButton>
-      <MyButton size="small" href={project.links.repoLink} color="blue">Github Repo</MyButton>
+      <MyButton size="small" target="blank" href={project.links.appLink} color="green">Deployed Application</MyButton>
+      <MyButton size="small" target="blank" href={project.links.repoLink} color="blue">Github Repo</MyButton>
     </React.Fragment>
   );
 }

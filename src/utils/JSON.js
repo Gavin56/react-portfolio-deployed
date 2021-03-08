@@ -21,24 +21,24 @@ const projects = [
     },
   },
   {
-    name: "Daily Planner",
+    name: "Going Platinum",
     description:
-      "Use the power of local storage and dynamic events to log your tasks.",
+      "A MERN app that uses the Spotfy API to pair customizable playlists with user-created tasks.",
     image:
-      "https://github.com/Gavin56/images/blob/main/Webp.net-resizeimage%20(2).png?raw=true",
+      "https://raw.githubusercontent.com/Gavin56/images/main/going-platinum-profile.png",
     links: {
-      appLink: "https://gavin56.github.io/planner/",
-      repoLink: "https://github.com/Gavin56/planner",
+      appLink: "https://going-platinum.herokuapp.com/",
+      repoLink: "https://github.com/Gavin56/going-platinum",
     },
   },
   {
-    name: "Coding Quiz",
-    description: "Answer questions about coding before the time runs out.",
+    name: "Google Boohub.ks Search",
+    description: "Search for books using Google's API and save them to the database.",
     image:
-      "https://github.com/Gavin56/images/blob/main/Webp.net-resizeimage.png?raw=true",
+      "https://github.com/Gavin56/images/blob/main/google-books-searched.png?raw=true",
     links: {
-      appLink: "https://gavin56.github.io/code-quiz/",
-      repoLink: "https://github.com/Gavin56/code-quiz",
+      appLink: "https://google-books-search-gavin.herokuapp.com/",
+      repoLink: "https://github.com/Gavin56/google-books-search",
     },
   },
   {
