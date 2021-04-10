@@ -104,7 +104,7 @@ function About() {
                         style={{
                           textDecoration: "none",
                         }}
-                        href="https://drive.google.com/file/d/16iPBQwg1EaKFSzm4a0Q-4eB7Q0s6cKND/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1KfxKS_Qn_3-T_4Lkms1iFn9IHu1iRJW2/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
